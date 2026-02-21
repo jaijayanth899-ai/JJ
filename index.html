@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jai | Elite Developer</title>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0f0d;
+color:#00ff88;
+overflow-x:hidden;
+}
+
+/* LOADING SCREEN */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-bar{
+width:300px;
+height:10px;
+background:#222;
+border-radius:10px;
+overflow:hidden;
+margin-top:20px;
+}
+
+.loader-progress{
+height:100%;
+width:0%;
+background:#00ff88;
+animation:load 3s forwards;
+}
+
+@keyframes load{
+to{width:100%;}
+}
+
+button{
+padding:10px 20px;
+background:#00ff88;
+border:none;
+cursor:pointer;
+margin-top:20px;
+font-weight:bold;
+}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:center;
+gap:30px;
+padding:15px;
+z-index:1000;
+}
+
+nav a{
+color:#00ff88;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero img{
+width:180px;
+border-radius:50%;
+border:3px solid #00ff88;
+margin-bottom:20px;
+}
+
+.typing{
+font-size:22px;
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border:1px solid #00ff88;
+border-radius:10px;
+transition:0.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00ff88;
+}
+
+.card img{
+width:60px;
+margin-bottom:15px;
+}
+
+/* Reviews */
+.review-box{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+margin:auto;
+}
+
+input,textarea{
+padding:8px;
+background:#111;
+border:1px solid #00ff88;
+color:#00ff88;
+}
+
+.stars span{
+cursor:pointer;
+font-size:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+}
+
+/* Responsive */
+@media(max-width:600px){
+.hero img{
+width:130px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loader">
+<h1>Deploying ZORO Portfolio...</h1>
+<div class="loader-bar">
+<div class="loader-progress"></div>
+</div>
+<button onclick="startSite()">Enter</button>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#reviews">Reviews</a>
+<a href="https://discord.gg/MecR9ejqZX" target="_blank">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<img src="Zoro Icon.jpg" alt="Profile">
+<h1>Jai Jayanth</h1>
+<div class="typing"></div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="cards">
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+<h3>HTML</h3>
+<p>Professional Web Structure Developer</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+<h3>CSS</h3>
+<p>Advanced Styling & Responsive Design</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
+<h3>JavaScript</h3>
+<p>Interactive & Dynamic Development</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+<h3>Java</h3>
+<p>Backend & App Development</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png">
+<h3>C++</h3>
+<p>Learning App Development</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png">
+<h3>C#</h3>
+<p>Learning .NET & Application Systems</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Software Developer</h3>
+<p>Full Stack & Optimization Expert</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Web Developer</h3>
+<p>Professional Frontend Specialist</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="cards">
+
+<div class="card"><h3>CoreNode</h3></div>
+<div class="card"><h3>EnderNode</h3></div>
+<div class="card"><h3>Flarbyte</h3></div>
+<div class="card"><h3>Neliox Hosting</h3></div>
+<div class="card"><h3>To Do List App</h3></div>
+<div class="card"><h3>Facebook Replica</h3></div>
+<div class="card"><h3>Founder - Leaf Studio</h3><p>10+ Developers | Free Services</p></div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<h2>Client Reviews</h2>
+
+<div class="review-box">
+<input type="text" id="reviewName" placeholder="Your Name">
+<textarea id="reviewText" placeholder="What did I develop for you?"></textarea>
+<div class="stars">
+<span onclick="rate(1)">⭐</span>
+<span onclick="rate(2)">⭐</span>
+<span onclick="rate(3)">⭐</span>
+<span onclick="rate(4)">⭐</span>
+<span onclick="rate(5)">⭐</span>
+</div>
+<button onclick="submitReview()">Submit Review</button>
+</div>
+
+<div id="reviewList"></div>
+
+</section>
+
+<footer>
+© 2026 Jai Jayanth | ZORO Elite Developer
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function startSite(){
+document.getElementById("loader").style.display="none";
+}
+
+/* Typing Animation */
+const text="Software Developer | Panel Developer | Optimizer";
+let i=0;
+function type(){
+if(i<text.length){
+document.querySelector(".typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,50);
+}
+}
+type();
+
+/* Reviews */
+let selectedRating=0;
+
+function rate(stars){
+selectedRating=stars;
+}
+
+function submitReview(){
+const name=document.getElementById("reviewName").value;
+const text=document.getElementById("reviewText").value;
+
+if(localStorage.getItem("reviewed")){
+alert("You can only submit one review.");
+return;
+}
+
+if(name && text && selectedRating){
+const review=document.createElement("div");
+review.className="card";
+review.innerHTML=`<h3>${name}</h3>
+<p>${"⭐".repeat(selectedRating)}</p>
+<p>${text}</p>`;
+document.getElementById("reviewList").appendChild(review);
+
+localStorage.setItem("reviewed",true);
+}
+}
+</script>
+
+</body>
+</html>
